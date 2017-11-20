@@ -1,0 +1,47 @@
+#Zad 2 Lab_4
+losowanie_kart = function(n){
+  if (n>52) {
+    info = cat("nie można wylosować więcej kart niż 52");
+  } else {
+      talia = c("Dama","Król","Walet","10","9","8","7","6","5","4","3","2","As");
+     kolory = c("Pik","Kier","Karo","Trefl");
+    wylosowane = c()
+    for (i in 1:n){
+      x = sample(talia,1)
+      y = sample(kolory,1)
+      wylosowane = c(wylosowane,x,y)
+      for (j in 1:length(talia))
+      {
+        if (talia [j] ==x){
+          talia = talia[-j]
+        }
+      }
+    }
+    info=c(cat(wylosowane, x,y))
+  } 
+  return (info)
+}
+
+losowanie_kart(4)
+
+
+
+ciag = function(n){
+  suma =0;
+  for (i in 1:n) {
+    suma = suma + 1/n^2;
+  }
+  return (suma);
+}
+
+granica = function(fun, epsilon=0.00001){
+  n = 2;
+  obecna = fun(2);
+  poprzednia = fun(1);
+  while (abs(obecna-poprzednia)>epsilon){
+    n=n+1;
+    poprzednia = obecna;
+    obecna = fun(n)
+  }
+  return(obecna);
+}
