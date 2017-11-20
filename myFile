@@ -1,0 +1,4 @@
+wektor=1:10
+length(wektor)
+max(wektor)
+#Czy poprawnie?
