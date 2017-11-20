@@ -1,0 +1,29 @@
+#Zestaw 3
+#Zadanie 2
+PESEL = "01220104253"
+year = substr(PESEL,1,2)
+year= 1900 + as.numeric(year)
+year
+month = substr(PESEL,3,4)
+month = as.numeric(month)
+month
+day = substr(PESEL,5,6)
+day = as.numeric(day)
+day
+
+#Zadanie 3
+
+przyjaciele = function(n,b){
+  for (i in 2:n){
+    a = 0 ;
+    for (j in 1:(i-1)){
+      if (i%%j==0){
+       a = a + j;
+      }
+    }
+    if (a==b){
+      cat(b,', ');
+    }
+  }
+}
+przyjaciele(284,220);
