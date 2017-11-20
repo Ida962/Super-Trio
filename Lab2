@@ -1,0 +1,58 @@
+x=c(0,30,45,60,90)
+sin(x)
+cos(x)
+tan(x)
+
+'Zadanie 1'
+x=c(0,30,45,60,90,120)
+data.frame(Kąt=x,Sinus=sin(x), Cosinus = cos(x),Tangens = tan(x))
+
+"Zadanie 2"
+y=c(0,2,6,3,2,1,5,7,8)
+Ekstrema = function(y)
+{if (length(y)>6)
+{return (cat("max",y[c(max(y),max(y)-1)],'min', min(y)));}
+  else
+  {return('Zbyt krótki wektor');}
+}
+Ekstrema(y)
+
+(x=rnorm(10))
+indeks_min = 1
+wartosc_min=i[1]
+for i = 2:length(x)
+{if x[i]<indeks_min 
+  {return (wartosc_min=x[i]);}}
+
+y=rnorm(10)
+inne_min = function(y)
+{z=sort(y);
+v_min=z[1:3];
+n=length(X);
+v_max = z[(n-2):n];
+return(list(min=v_min,max=v_max));
+}
+
+inne_min(y)
+
+sapply(x,Ekstrema) 
+
+'Zadanie 3'
+Data = function() {
+  cat("Dzisiaj jest ")
+  cat(format(Sys.time(), "%A %d.%m.%y"))
+}
+Data()
+
+'Zadanie 4'
+today=Sys.Date()
+next_day= + 3
+
+
+
+'Zadanie 5'
+Badanie = function(){
+  sample(seq(as.Date('2017/01/01'), as.Date('2017/12/31'), by="day"), 1)}
+Badanie()
+
+'Zadanie 3'
